@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo SP-Corp - Contactos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SP-Corporation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Pagina pricipal">Inicio</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="contactos.html">Formulario de contactos</a></li>
+                <li><a href="briquetas.html">Briquetas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Nuestro Equipo Estratégico</h2>
+        <p>Conoce a los especialistas detrás de la iniciativa SP-Corp</p> 
+
+        <div class="contenedor-equipo">
+            
+            <div class="tarjeta-integrante">
+                <h3>Chelsy Camila Rojas Ccapa</h3>
+                <span class="rol-etiqueta">Documentación formal (WORD)</span>
+                <p>Correo:</p>
+                <a href="mailto:chelsycrc1807@gmail.com" class="correo-link">chelsycrc1807@gmail.com</a>
+            </div>
+
+            <div class="tarjeta-integrante">
+                <h3>José Antonio Huaycani Turpo</h3>
+                <span class="rol-etiqueta">Programador Web (HTML)</span>
+                <p>Correo:</p>
+                <a href="mailto:josepht4325@gmail.com" class="correo-link">josepht4325@gmail.com</a>
+            </div>
+
+            <div class="tarjeta-integrante">
+                <h3>Fernando León Quenaya Borge</h3>
+                <span class="rol-etiqueta">Contador, Plan financiero (EXCEL)</span>
+                <p>Correo:</p>
+                <a href="mailto:fquenaya94@gmail.com" class="correo-link">fquenaya94@gmail.com</a>
+            </div>
+
+        </div>
+
+        <section class="seccion-formulario">
+            <h3>Envíanos un mensaje</h3>
+            <form id="formularioContacto">
+                <div class="form-campo">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-campo">
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" required placeholder="Escribe tus dudas aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Comentario</button>
+            </form>
+            <div id="mensajeExito" style="display:none; margin-top:20px; color:#155724; background:#d4edda; padding:15px; border-radius:5px;">
+                ¡Gracias! Tu mensaje ha sido enviado con éxito a nuestro equipo.
+            </div>
+        </section>
+    </main>
+
+    <footer style="position: relative; margin-top: 50px;">
+        <p>© 2025 Somos SP-Corp|Te esperamos|Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('formularioContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('mensajeExito').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
